@@ -1,0 +1,86 @@
+{
+  "eurocv": {
+    "foto":  "id-photo2.jpg",
+    "desiredEmploy": "Physic Engineer",
+    "personalInfo": {
+      "name": {
+        "lastname": "Lima",
+        "firstname": "Luís"
+      },
+      "address": {
+        "street": "Avenida da República",
+        "cp": "4400-470",
+        "local": "Ílhavo",
+        "country": "Portugal"
+      },
+      "contact": {
+        "phone": {
+          "countryprefix": "351",
+          "number": "918392009"
+        },
+        "fax": {
+          "countryprefix": "351",
+          "number": "223850194"
+        },
+        "email": [
+          {
+            "type": "Professional",
+            "value": "mariess@ua.pt"
+          },
+          {
+            "type": "Personal",
+            "value": "luis.lima98@portugalmail.pt"
+          }
+        ]
+      },
+      "nacionality": "Portuguese",
+      "birthdate": {
+        "day": "08",
+        "month": "December",
+        "year": "1998"
+      },
+      "gender": "Female"
+    },
+    "workexperience": {
+      "position": {
+        "dates": {
+          "start": {
+            "month": "January",
+            "year": "2000"
+          },
+          "end": {
+            "month": "March",
+            "year": "2019"
+          }
+        },
+        "occupation": "Systems Tester",
+        "activities": {
+          "activity": [
+            {
+              "designation": "CEO",
+              "time": "2 years"
+            },
+            {
+              "designation": "Something I don't even know",
+              "time": "10 years"
+            }
+          ]
+        },
+        "employer": {
+          "name": "NASA",
+          "address": {
+            "street": "Av. Lourenço Peixinho",
+            "cp": "4700",
+            "local": "Aveiro",
+            "country": "Portugal"
+          },
+          "contact": {
+            "www": "www.nasa.pt",
+            "email": "nasageral@nasa.pt"
+          }
+        },
+        "businessSector": "Physics"
+      }
+    }
+  }
+}
