@@ -11,7 +11,7 @@
     <h1>List of All Books</h1>
     <ol>
     {% for book in books %}
-        <li><a href={% url '/details/'|add:forloop.counter %}>{{ book }}</a></li>
+        <li><a href={% url 'book_details' book.id %}>{{ book }}</a></li>
     {% endfor %}
     </ol>
 

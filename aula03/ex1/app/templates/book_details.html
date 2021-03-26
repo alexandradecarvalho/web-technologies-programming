@@ -9,7 +9,7 @@
 
     <h1>{{ book.title }}</h1>
 
-    {% for author in book.authors %}
+    {% for author in book.authors.all %}
         <p>{{ author.name }}</p>
     {% endfor %}
 
