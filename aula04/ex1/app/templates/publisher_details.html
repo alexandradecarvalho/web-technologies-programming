@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ publisher.name }}</title>
+</head>
+<body>
+{% block content %}
+
+    <h1>{{ publisher.name }}</h1>
+
+    <p><b>From:</b> {{ publisher.city }}, {{ publisher.country }}</p>
+    <p><b>Website:</b> {{ publisher.website }}</p>
+
+{% endblock %}
+</body>
+</html>

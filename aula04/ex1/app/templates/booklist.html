@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Results</title>
+</head>
+<body>
+{% block content %}
+    <p>Search by: <strong>{{ query }}</strong></p>
+
+    {% if books %}
+        <p>Found {{ books|lenght }} book {{ books|pluralize }}.</p>
+        <ul>
+            {% for book in books %}
+                <li>{{ book.title }}</li>
+                <ul>
+                    <li>{{ book.publisher }}</li>
+                    <li>{{ book.date }}</li>
+                    <ul>
+                        {% for autor in book.authors.all %}
+                            <li>{{ autor }}</li>
+                        {% endfor %}
+                    </ul>
+                </ul>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p>Did not found any result</p>
+    {% endif %}
+{% endblock %}
+</body>
+</html>

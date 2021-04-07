@@ -1,0 +1,21 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>a)</title>
+</head>
+<body>
+{% block content %}
+
+    <h1>List of All Books</h1>
+    <ol>
+    {% for book in books %}
+        <li><a href={% url 'book_details' book.id %}>{{ book }}</a></li>
+    {% endfor %}
+    </ol>
+
+
+{% endblock %}
+</body>
+</html>
