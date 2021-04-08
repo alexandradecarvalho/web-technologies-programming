@@ -1,5 +1,6 @@
 from django.shortcuts import render
 
+from app.forms import BookQueryForm
 from app.models import Author, Book, Publisher
 
 
@@ -54,3 +55,15 @@ def booksearch(request):
             return render(request, 'booksearch.html', {'error': True})
     else:
         return render(request, 'booksearch.html', {'error': False})
+
+
+def bookquery(request):
+    if request.method == 'POST':
+        form = BookQueryForm(request.POST)
+        if form.is_valid():
+            query = form.cleaned_data['query']
+            books = Book.objects.filter(title__icontains=query)
+            return render(request, 'booklist.html', {'books': books, 'query': query})
+    else:
+        form = BookQueryForm()
+    return render(request, 'bookquery.html', {'form': form})
