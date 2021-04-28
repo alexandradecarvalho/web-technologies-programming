@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>New Book</title>
+</head>
+<body>
+
+<h1> New Book!</h1>
+<form action="." method="post">
+    {% csrf_token %}
+    {{ form.errors }}
+    <br/>
+    <br/>
+    {{ form.title.label_tag }}
+    {{ form.title }}
+    <br/>
+    <br/>
+    {{ form.date.label_tag }}
+    {{ form.date }}
+    <br/>
+    <br/>
+    {{ form.authors.label_tag }}
+    {{ form.authors }}
+    <br/>
+    <br/>
+    {{ form.publisher.label_tag }}
+    {{ form.publisher }}
+    <br/>
+    <br/>
+    <input type="submit" value="Add!">
+</form>
+
+</body>
+</html>

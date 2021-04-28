@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Results</title>
+</head>
+<body>
+{% block content %}
+    <p>Search by: <strong>{{ query }}</strong></p>
+
+    {% if authors %}
+        <p>Found {{ authors|length }} author {{ authors|pluralize }}.</p>
+        <ul>
+            {% for author in authors %}
+                <li>{{ author.name }}</li>
+                <ul>
+                    <li>{{ author.email }}</li>
+                </ul>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p>Did not found any result</p>
+    {% endif %}
+{% endblock %}
+</body>
+</html>

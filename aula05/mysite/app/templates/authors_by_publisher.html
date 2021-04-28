@@ -1,0 +1,27 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>e)</title>
+</head>
+<body>
+{% include 'loginpartial.html' %}
+
+{% block content %}
+
+    <h1>List of Authors of {{ publisher.name }}</h1>
+    <ol>
+    {% for book in books %}
+        {% if book.publisher == publisher %}
+        {% for author in book.authors.all %}
+            <li><a href={% url 'author_details' author.id %}>{{ author.name }}</a></li>
+        {% endfor %}
+        {% endif %}
+    {% endfor %}
+    </ol>
+
+
+{% endblock %}
+</body>
+</html>

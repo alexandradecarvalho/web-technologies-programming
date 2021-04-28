@@ -29,4 +29,10 @@ urlpatterns = [
     path('books_by_author/<str:id>', views.books_by_author, name='books_by_author'),
     path('authors_by_publisher/<str:id>', views.authors_by_publisher, name='authors_by_publisher'),
     path('booksearch/', views.booksearch, name='booksearch'),
+    path('bookquery/', views.bookquery, name='bookquery'),
+    path('bookquery_by_infos/', views.bookquery_by_infos, name='bookquery_by_infos'),
+    path('authorquery/', views.authorquery, name='authorquery'),
+    path('addauthor/', views.addauthor, name='addauthor'),
+    path('addpublisher/', views.addpublisher, name='addpublisher'),
+    path('addbook/', views.addbook, name='addbook'),
 ]

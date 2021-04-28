@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Booksearch</title>
+    <title>Booksearch without Forms</title>
 </head>
 <body>
 {% block content %}
@@ -11,6 +11,7 @@
         <p style="...">ERROR: Insert a query term.</p>
     {% endif %}
 
+    <p>Search Book By Title:</p>
     <form action="." method="post">
         {% csrf_token %}
         <input type="text" name="query">

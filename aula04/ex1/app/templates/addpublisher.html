@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>New Publisher</title>
+</head>
+<body>
+
+<h1> New Publisher!</h1>
+<form action="." method="post">
+    {% csrf_token %}
+    {{ form.name.label_tag }}
+    {{ form.name }}
+    <br/>
+    <br/>
+    {{ form.city.label_tag }}
+    {{ form.city }}
+    <br/>
+    <br/>
+    {{ form.country.label_tag }}
+    {{ form.country }}
+    <br/>
+    <br/>
+    {{ form.website.label_tag }}
+    {{ form.website }}
+    <br/>
+    <br/>
+    <input type="submit" value="Add!">
+</form>
+
+</body>
+</html>
