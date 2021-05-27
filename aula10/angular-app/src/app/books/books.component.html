@@ -1,0 +1,15 @@
+<h2>Books</h2>
+<ul class="books">
+  <li *ngFor="let book of books" (click)="onSelect(book)">
+    <span class="badge">{{book.year}}</span> {{book.title}}
+  </li>
+</ul>
+<div *ngIf="selectedBook">
+  <h2>Information on {{selectedBook.title | uppercase}}</h2>
+  <div>
+    <label>
+      Year:
+      <input [(ngModel)]="selectedBook.year" placeholder="name">
+    </label>
+  </div>
+</div>
