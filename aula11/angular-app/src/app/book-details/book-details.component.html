@@ -1,0 +1,23 @@
+<div *ngIf="book">
+  <h2>Information on {{book.title | uppercase}}</h2>
+  <div><label>Title: <input [(ngModel)]="book.title" readonly> </label></div>
+  <div>
+    <label>
+      Author:
+      <input [(ngModel)]="book.authors" placeholder="name">
+    </label>
+  </div>
+  <div>
+    <label>
+      Publisher:
+      <input [(ngModel)]="book.publisher" placeholder="email">
+    </label>
+  </div>
+  <div>
+    <label>
+      Year:
+      <input [(ngModel)]="book.year" placeholder="email">
+    </label>
+  </div>
+  <button (click)="goBack()">go back</button>
+</div>
